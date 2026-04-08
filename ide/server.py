@@ -12,8 +12,8 @@ from flask import Flask, send_from_directory
 from flask_socketio import SocketIO, emit
 
 _BASE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(_BASE, '..', 'src', 'lexer'))
-sys.path.insert(0, os.path.join(_BASE, '..', 'src', 'parser'))
+sys.path.insert(0, os.path.join(_BASE, 'src', 'lexer'))
+sys.path.insert(0, os.path.join(_BASE, 'src', 'parser'))
 
 from tokenizer import tokenizar_codigo, ErrorLexico
 from parser import parsear_codigo, ErrorSintactico
