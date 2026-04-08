@@ -1,0 +1,33 @@
+#[
+    Programa: Calculadora Completa
+    Descripcion: Calculadora con operaciones basicas
+]#
+
+inicio programa_principal
+    mostrar "=== CALCULADORA CCODE v1.0 ==="
+    mostrar ""
+
+    guardar numero1 es numero con capturar "Ingresa el primer numero: "
+    guardar numero2 es numero con capturar "Ingresa el segundo numero: "
+
+    guardar suma es numero con numero1 mas numero2
+    guardar resta es numero con numero1 menos numero2
+    guardar multiplicacion es numero con numero1 por numero2
+
+    mostrar ""
+    mostrar "=== RESULTADOS ==="
+    mostrar "Suma:" suma
+    mostrar "Resta:" resta
+    mostrar "Multiplicacion:" multiplicacion
+
+    intentar
+        guardar division es numero con numero1 entre numero2
+        guardar modulo es numero con numero1 resto numero2
+        guardar potencia es numero con numero1 elevado numero2
+        mostrar "Division:" division
+        mostrar "Modulo:" modulo
+        mostrar "Potencia:" potencia
+    capturar_error como error
+        mostrar "Operacion no valida:" error
+    final
+final

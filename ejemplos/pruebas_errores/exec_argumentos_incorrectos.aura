@@ -1,0 +1,6 @@
+inicio p
+    crear funcion sumar con parametros a, b
+        retornar a mas b
+    final
+    invocar sumar con 1, 2, 3
+final

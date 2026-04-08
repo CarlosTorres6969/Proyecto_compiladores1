@@ -1,0 +1,12 @@
+inicio p
+    intentar
+        guardar x es numero con 10
+        lanzar "algo salio mal en el calculo"
+        mostrar x
+    capturar_error como e
+        mostrar "Error capturado:"
+        mostrar e
+    siempre
+        mostrar "Bloque siempre se ejecuta"
+    final
+final

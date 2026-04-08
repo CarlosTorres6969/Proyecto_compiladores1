@@ -1,0 +1,10 @@
+#[
+    Programa: Hola Mundo
+    Descripción: Primer programa en CCODE
+    Autor: Sistema CCODE
+]#
+
+inicio programa_principal
+    mostrar "¡Bienvenido a CCODE!"
+    mostrar "Este es tu primer programa"
+final

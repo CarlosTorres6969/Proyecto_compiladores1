@@ -1,0 +1,34 @@
+#[
+    Programa: Detector de Par o Impar
+    Descripcion: Determina si un numero es par o impar
+]#
+
+inicio programa_principal
+    mostrar "=== DETECTOR DE PAR O IMPAR ==="
+    mostrar ""
+
+    repetir
+        guardar valor es numero con capturar "Ingresa un numero (0 para salir): "
+
+        cuando valor es 0
+            mostrar "Hasta luego!"
+            detener
+        final
+
+        guardar residuo es numero con valor resto 2
+
+        cuando residuo es 0
+            mostrar "El numero" valor "es PAR"
+        sino
+            mostrar "El numero" valor "es IMPAR"
+        final
+
+        cuando valor mayor_que 0
+            mostrar "(Numero positivo)"
+        sino
+            mostrar "(Numero negativo)"
+        final
+
+        mostrar ""
+    final
+final

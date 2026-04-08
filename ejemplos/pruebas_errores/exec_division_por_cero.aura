@@ -1,0 +1,6 @@
+inicio p
+    guardar a es numero con 10
+    guardar b es numero con 0
+    guardar r es numero con a entre b
+    mostrar r
+final

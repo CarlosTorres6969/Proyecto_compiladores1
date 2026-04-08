@@ -1,0 +1,4 @@
+inicio p
+    cuando x es 1
+        mostrar "uno"
+final

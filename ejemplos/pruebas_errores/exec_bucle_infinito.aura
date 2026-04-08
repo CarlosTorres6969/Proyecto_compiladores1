@@ -1,0 +1,6 @@
+inicio p
+    guardar i es numero con 0
+    mientras i mayor_o_igual 0
+        guardar i es numero con i mas 1
+    final
+final

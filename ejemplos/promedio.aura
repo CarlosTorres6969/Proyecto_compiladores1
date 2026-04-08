@@ -1,0 +1,34 @@
+#[
+    Programa: Calculadora de Promedio
+    Descripción: Calcula el promedio de 3 números
+]#
+
+inicio programa_principal
+    mostrar "═══════════════════════════════"
+    mostrar "  CALCULADORA DE PROMEDIO"
+    mostrar "═══════════════════════════════"
+    mostrar ""
+    
+    # Capturar tres números
+    guardar numero1 es numero con capturar "Ingresa el primer número: "
+    guardar numero2 es numero con capturar "Ingresa el segundo número: "
+    guardar numero3 es numero con capturar "Ingresa el tercer número: "
+    
+    # Calcular suma y promedio
+    guardar suma_total es numero con numero1 mas numero2 mas numero3
+    guardar promedio es numero con suma_total entre 3
+    
+    # Mostrar resultados
+    mostrar ""
+    mostrar "═══ RESULTADOS ═══"
+    mostrar "Números ingresados:" numero1 "," numero2 "," numero3
+    mostrar "Suma total:" suma_total
+    mostrar "Promedio:" promedio
+    
+    # Determinar si el promedio es aprobatorio
+    cuando promedio mayor_o_igual 6
+        mostrar "Estado: APROBADO ✓"
+    sino
+        mostrar "Estado: REPROBADO ✗"
+    final
+final

@@ -1,0 +1,4 @@
+inicio p
+    guardar lista es coleccion con [10, 20, 30]
+    mostrar lista[5]
+final

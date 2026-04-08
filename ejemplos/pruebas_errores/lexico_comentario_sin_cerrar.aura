@@ -1,0 +1,4 @@
+#[ este comentario nunca se cierra
+inicio p
+    mostrar "hola"
+final

@@ -1,0 +1,27 @@
+{
+  "name": "ccode-ide",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "concurrently \"python ../server.py\" \"vite\""
+  },
+  "dependencies": {
+    "@codemirror/autocomplete": "^6.18.6",
+    "@codemirror/commands": "^6.7.1",
+    "@codemirror/language": "^6.10.8",
+    "@codemirror/state": "^6.5.0",
+    "@codemirror/view": "^6.36.3",
+    "@lezer/highlight": "^1.2.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "socket.io-client": "^4.8.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "vite": "^6.0.5"
+  }
+}

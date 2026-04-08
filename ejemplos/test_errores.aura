@@ -1,0 +1,6 @@
+inicio test_errores
+    guardar x es numero con 10
+    guardar y es numero con 0
+    guardar resultado es numero con x entre y
+    mostrar resultado
+final

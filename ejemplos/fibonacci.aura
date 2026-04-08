@@ -1,0 +1,42 @@
+#[
+    Programa: Secuencia de Fibonacci
+    Descripción: Genera la secuencia de Fibonacci
+]#
+
+crear funcion fibonacci con parametros n
+    cuando n menor_o_igual 1
+        retornar n
+    final
+    
+    guardar a es numero con 0
+    guardar b es numero con 1
+    guardar contador es numero con 2
+    
+    mientras contador menor_o_igual n
+        guardar temp es numero con a mas b
+        guardar a es numero con b
+        guardar b es numero con temp
+        guardar contador es numero con contador mas 1
+    final
+    
+    retornar b
+final
+
+inicio programa_principal
+    mostrar "═══════════════════════════════"
+    mostrar "  SECUENCIA DE FIBONACCI"
+    mostrar "═══════════════════════════════"
+    mostrar ""
+    
+    guardar cantidad es numero con capturar "¿Cuántos números de Fibonacci deseas? "
+    
+    mostrar ""
+    mostrar "Secuencia de Fibonacci:"
+    
+    guardar i es numero con 0
+    mientras i menor_que cantidad
+        guardar resultado es numero con invocar fibonacci con i
+        mostrar "F(" i ") =" resultado
+        guardar i es numero con i mas 1
+    final
+final
