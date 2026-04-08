@@ -26,28 +26,33 @@ inicio programa_principal
     mostrar "=== CALCULADORA CCODE v1.0 ==="
     mostrar ""
 
-    guardar numero1 es numero con capturar "Ingresa el primer numero: "
-    guardar numero2 es numero con capturar "Ingresa el segundo numero: "
-
-    guardar suma es numero con numero1 mas numero2
-    guardar resta es numero con numero1 menos numero2
-    guardar multiplicacion es numero con numero1 por numero2
-
-    mostrar ""
-    mostrar "=== RESULTADOS ==="
-    mostrar "Suma:" suma
-    mostrar "Resta:" resta
-    mostrar "Multiplicacion:" multiplicacion
-
     intentar
-        guardar division es numero con numero1 entre numero2
-        guardar modulo es numero con numero1 resto numero2
-        guardar potencia es numero con numero1 elevado numero2
-        mostrar "Division:" division
-        mostrar "Modulo:" modulo
-        mostrar "Potencia:" potencia
-    capturar_error como error
-        mostrar "Operacion no valida:" error
+        guardar numero1 es numero con capturar "Ingresa el primer numero: "
+        guardar numero2 es numero con capturar "Ingresa el segundo numero: "
+
+        guardar suma es numero con numero1 mas numero2
+        guardar resta es numero con numero1 menos numero2
+        guardar multiplicacion es numero con numero1 por numero2
+
+        mostrar ""
+        mostrar "=== RESULTADOS ==="
+        mostrar "Suma:" suma
+        mostrar "Resta:" resta
+        mostrar "Multiplicacion:" multiplicacion
+
+        intentar
+            guardar division es numero con numero1 entre numero2
+            guardar residuo es numero con numero1 resto numero2
+            guardar potencia es numero con numero1 elevado numero2
+            mostrar "Division:" division
+            mostrar "Modulo:" residuo
+            mostrar "Potencia:" potencia
+        capturar_error como e
+            mostrar "Operacion no valida:" e
+        final
+    capturar_error como e
+        mostrar "Error de entrada:" e
+        mostrar "Asegurate de ingresar numeros validos"
     final
 final
 `,
@@ -78,41 +83,78 @@ inicio programa_principal
     mostrar "=== SECUENCIA DE FIBONACCI ==="
     mostrar ""
 
-    guardar cantidad es numero con capturar "¿Cuántos números de Fibonacci deseas? "
+    intentar
+        guardar cantidad es numero con capturar "¿Cuántos números de Fibonacci deseas? "
 
-    guardar i es numero con 0
-    mientras i menor_que cantidad
-        guardar resultado es numero con invocar fibonacci con i
-        mostrar "F(" i ") =" resultado
-        guardar i es numero con i mas 1
+        cuando cantidad menor_o_igual 0
+            lanzar "Ingresa un número mayor a 0"
+        final
+
+        guardar i es numero con 0
+        mientras i menor_que cantidad
+            guardar resultado es numero con invocar fibonacci con i
+            mostrar "F(" i ") =" resultado
+            guardar i es numero con i mas 1
+        final
+    capturar_error como e
+        mostrar "Error:" e
     final
 final
 `,
   par_impar: `inicio programa_principal
-    guardar numero es numero con capturar "Ingresa un numero: "
-    guardar modulo es numero con numero resto 2
+    mostrar "=== DETECTOR PAR O IMPAR ==="
+    mostrar "Ingresa 0 para salir"
+    mostrar ""
 
-    cuando modulo es 0
-        mostrar numero "es PAR"
-    sino
-        mostrar numero "es IMPAR"
+    repetir
+        intentar
+            guardar valor es numero con capturar "Ingresa un numero: "
+
+            cuando valor es 0
+                mostrar "Hasta luego!"
+                detener
+            final
+
+            guardar residuo es numero con valor resto 2
+
+            cuando residuo es 0
+                mostrar valor "es PAR"
+            sino
+                mostrar valor "es IMPAR"
+            final
+        capturar_error como e
+            mostrar "Error:" e
+            mostrar "Intenta de nuevo o ingresa 0 para salir"
+        final
+
+        mostrar ""
     final
 final
 `,
   promedio: `inicio programa_principal
     mostrar "=== CALCULADORA DE PROMEDIO ==="
-    guardar cantidad es numero con capturar "¿Cuántos números? "
-    guardar suma es numero con 0
-    guardar i es numero con 0
 
-    mientras i menor_que cantidad
-        guardar valor es numero con capturar "Número: "
-        guardar suma es numero con suma mas valor
-        guardar i es numero con i mas 1
+    intentar
+        guardar cantidad es numero con capturar "¿Cuántos números? "
+
+        cuando cantidad menor_o_igual 0
+            lanzar "La cantidad debe ser mayor a 0"
+        final
+
+        guardar suma es numero con 0
+        guardar i es numero con 0
+
+        mientras i menor_que cantidad
+            guardar valor es numero con capturar "Número: "
+            guardar suma es numero con suma mas valor
+            guardar i es numero con i mas 1
+        final
+
+        guardar promedio es numero con suma entre cantidad
+        mostrar "Promedio:" promedio
+    capturar_error como e
+        mostrar "Error:" e
     final
-
-    guardar promedio es numero con suma entre cantidad
-    mostrar "Promedio:" promedio
 final
 `,
 }
