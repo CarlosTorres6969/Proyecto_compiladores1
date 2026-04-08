@@ -1,9 +1,13 @@
 [phases.setup]
-nixPkgs = ["nodejs_20", "nodePackages.npm"]
+nixPkgs = ["python312", "nodejs_20", "nodePackages.npm"]
+cmds = [
+  "python3 -m venv /opt/venv",
+  "/opt/venv/bin/pip install --upgrade pip"
+]
 
 [phases.install]
 cmds = [
-  "pip install -r requirements.txt",
+  "/opt/venv/bin/pip install -r requirements.txt",
   "cd frontend && npm install"
 ]
 
@@ -13,4 +17,4 @@ cmds = [
 ]
 
 [start]
-cmd = "python server.py"
+cmd = "/opt/venv/bin/python server.py"
